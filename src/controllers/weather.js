@@ -1,11 +1,12 @@
 const express = require('express');
 const axios = require('axios');
+const APPID = process.env.APPID;
 
 function getRowData(req,res) {
     const { cc, city } = req.params;    
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city},${cc}&APPID=d0487bda7ec2ec8fdc5e3a9c7b34cec5`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city},${cc}&APPID=${APPID}`
       )
       .then(response => {
         res.send(response.data);
