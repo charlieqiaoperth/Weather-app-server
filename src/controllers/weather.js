@@ -2,6 +2,7 @@ const express = require('express');
 // const axios = require('../utils/axios');
 const responseFormatter = require('../utils/responseFormatter');
 const Weather = require('../models/Weather');
+
 // const APPID = process.env.APPID;
 
 function getRowData(req,res,next) {
